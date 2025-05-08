@@ -59,7 +59,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="https://docs.xylemma.com"
+              href="https://docs.xylemdao.com"
               target="_blank"
               className="text-sm font-medium text-zinc-400 transition-colors hover:text-white"
             >
@@ -108,7 +108,7 @@ export default function Home() {
                     Join Waitlist
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Link href="https://docs.xylemma.com" target="_blank">
+                  <Link href="https://docs.xylemdao.com" target="_blank">
                     <Button
                       size="lg"
                       variant="outline"
