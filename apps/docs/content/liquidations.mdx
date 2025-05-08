@@ -4,7 +4,7 @@ Liquidations are a critical part of the Xylem Protocol that help maintain the st
 
 # How Liquidations Work
 
-When a vault's collateralization ratio falls below the **liquidation threshold** (135%), the liquidation process begins:
+When a vault's collateralization ratio falls below the **liquidation threshold** (105%), the liquidation process begins:
 
 1. **Liquidation Trigger**: Oracle price feeds detect when a vault's collateralization ratio falls below the liquidation threshold
 2. **Liquidation Auction**: The protocol enables liquidators to purchase the vault's collateral at a discount
@@ -30,7 +30,7 @@ Liquidator's profit = [Vault_BTC - [Vault_BTC * liquidation_tax] + [Vault_BTC * 
 Where:
 - Liquidation_tax = 15%
 - Liquidation_rebate = a sliding function that increases as collateralization decreases
-- XYL_mint_min_collat_ratio = 160%
+- XYL_mint_min_collat_ratio = 130%
 
 # Reserve Protection
 

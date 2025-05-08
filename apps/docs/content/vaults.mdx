@@ -8,7 +8,7 @@ When a user wants to mint XYM, they deposit BTC into a vault. This process follo
 
 1. The system checks if the user has enough BTC
 2. The current BTC/USD price is verified through oracles
-3. All conditions must be met, particularly staying above the **160% minimum collateralization ratio**
+3. All conditions must be met, particularly staying above the **130% minimum collateralization ratio**
 
 For example, if you lock $10,000 in BTC, you can mint up to 6,250 XYM.
 
@@ -18,7 +18,7 @@ The vault has two critical functions:
 
 1. **User Control:** The user can update the vault—adding more BTC, borrowing more XYM, repaying debt, or withdrawing BTC (as long as the vault remains safe).
 
-2. **Liquidation Mechanism:** If BTC's value drops and the collateralization ratio falls below the **135% liquidation threshold**, the vault can be liquidated to protect the system. This ensures XYM is always backed by real BTC, even in volatile markets.
+2. **Liquidation Mechanism:** If BTC's value drops and the collateralization ratio falls below the **105% liquidation threshold**, the vault can be liquidated to protect the system. This ensures XYM is always backed by real BTC, even in volatile markets.
 
 # Technical Implementation
 
@@ -38,6 +38,6 @@ All changes to the vault are recorded to track the user's borrowing activity and
 Maximum XYM = (BTC Collateral * BTC/USD Price) / (Minimum Collateralization Ratio)
 ```
 
-Where Minimum Collateralization Ratio = 160%. The MCR is a key risk parameter defined in the Governance CRS, and is subject to governance and therefore change.
+Where Minimum Collateralization Ratio = 130%. The MCR is a key risk parameter defined in the Governance CRS, and is subject to governance and therefore change.
 
 Importantly, **the user always retains partial control**, and **the validators** simply ensure the protocol's rules are enforced—they never have unilateral control over your BTC. 
