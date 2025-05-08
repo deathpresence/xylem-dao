@@ -1,0 +1,19 @@
+# Overview
+
+Bitcoin's primary design as a store of value and settlement layer has created an opportunity for complementary systems that provide price stability while preserving Bitcoin's security and decentralization. Xylem leverages the Taproot upgrade, enabling Tapscript script paths controlled by governance-agreed inscriptions, to create secure, auditable primitives native to the Bitcoin L1 (without needing an intermediating L2) which approximate smart contracts, while retaining Bitcoin's trust assumptions.
+
+As the Bitcoin-native economy grows, it needs a store of account whose collateral is managed in a fully decentralized manner, without inheriting the security assumptions of a specific Bitcoin L2.
+
+# Core Components
+
+The Xylem Protocol consists of 7 core components:
+
+1. **XYM** - The BTC-Overcollateralized debt token soft pegged to the USD
+2. **Validator Network** - A decentralized network of nodes that evaluates, signs, and broadcasts user transactions according to protocol rules
+3. **Transaction Builder** - Constructs the Partially Signed Bitcoin Transactions (PSBTs) according to Xylem protocol rules, manages wallet signing, and communicates with the Validator Network
+4. **Canonical Reference Satoshis (CRSs)** - Satoshis inscribed with pointers which memorialize Xylem protocol consensus rules around key parameters and governance mechanisms
+5. **Bitcoin Collateralized Debt Positions (BCDPs)** - BTC assets escrowed or 'vaulted' by users to mint & collateralize XYM
+6. **The Reserve** - A protocol-owned bad debt reserve to safeguard the vault pool against scenarios where liquidation auctions garner insufficient interest
+7. **The Validation Layer** - A transaction parsing software similar to a bitcoin core node that allows stakeholders to verify the validity of all transactions associated with the protocol
+
+The protocol and all its working components will be open-sourced, with an independent, recognized third-party oracle provider operating the price signaling mechanism to the liquidation engine. 

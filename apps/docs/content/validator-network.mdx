@@ -1,0 +1,43 @@
+# Validator Network
+
+The Validator Network is a critical component of the Xylem Protocol that ensures transactions follow protocol rules without taking custody of users' assets. Unlike other protocols that may use FROST DKG (Flexible Round-Optimized Schnorr Threshold Distributed Key Generation), Xylem employs a simpler yet robust approach.
+
+# How Our Validator Network Works
+
+Instead of relying on FROST DKG, the Xylem validator network uses a simpler multi-signature approach with the following key features:
+
+1. **Direct Multi-signature Validation**: Each validator independently validates transaction requests against protocol rules
+2. **No Shared Key Material**: Validators maintain individual keys and do not participate in distributed key generation
+3. **M-of-N Consensus**: Transactions require signatures from a threshold of validators (e.g., 7-of-10) to be valid
+4. **Individual Accountability**: Each validator's actions are attributable and auditable on-chain
+
+# Benefits of Our Approach
+
+By not using FROST DKG, the Xylem validator network offers several advantages:
+
+1. **Simplicity**: Easier to implement, audit, and understand
+2. **Reduced Complexity**: No complex key generation ceremonies or specialized cryptography
+3. **Direct Accountability**: Clear attribution of validator actions
+4. **Individual Key Management**: Validators can employ their own security practices
+5. **Dynamic Validator Rotation**: Easier to add or remove validators through governance
+
+# Validator Selection
+
+Validators are selected through a governance process by XYLEM token holders. The protocol uses the following criteria for validator selection:
+
+1. Technical reliability and uptime
+2. Geographic distribution
+3. Institutional diversity
+4. Security practices
+5. Reputation and track record
+
+# Security Model
+
+The security of the validator network relies on:
+
+1. **Threshold Security**: Requiring M-of-N validators prevents a small number of malicious validators from compromising the system
+2. **Economic Incentives**: Validators are incentivized to follow protocol rules
+3. **Transparent Verification**: All validator actions can be independently verified on-chain
+4. **Regular Rotation**: The validator set is periodically reviewed and can be adjusted through governance
+
+The validator network interacts with the Transaction Builder to process user requests for creating vaults, minting XYM, repaying debt, and other protocol functions in a secure and decentralized manner. 

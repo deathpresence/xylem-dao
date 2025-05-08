@@ -1,0 +1,43 @@
+# Liquidations
+
+Liquidations are a critical part of the Xylem Protocol that help maintain the stability and collateralization of the XYM stablecoin. They ensure that XYM remains overcollateralized even during market volatility.
+
+# How Liquidations Work
+
+When a vault's collateralization ratio falls below the **liquidation threshold** (135%), the liquidation process begins:
+
+1. **Liquidation Trigger**: Oracle price feeds detect when a vault's collateralization ratio falls below the liquidation threshold
+2. **Liquidation Auction**: The protocol enables liquidators to purchase the vault's collateral at a discount
+3. **Debt Clearing**: The liquidator uses XYM to repay the vault's debt
+4. **Revenue Distribution**: A liquidation tax (15%) is applied and distributed between the protocol Reserve and liquidators
+
+# Liquidation Incentives
+
+The protocol uses a dynamic incentive system to ensure liquidations happen efficiently:
+
+1. **Progressive Rebate**: As a vault's collateralization ratio drops, liquidators receive an increasing portion of the liquidation tax
+2. **Liquidation Subsidy**: Below 124% collateralization, the protocol begins subsidizing liquidations to ensure they remain profitable
+3. **Duration Risk Mitigation**: The protocol's design minimizes the duration risk for liquidators who must purchase XYM elsewhere to close positions
+
+# Liquidation Curve
+
+The protocol employs a profit-sharing function for BTC liquidators, designed to incentivize prompt action:
+
+```
+Liquidator's profit = [Vault_BTC - [Vault_BTC * liquidation_tax] + [Vault_BTC * liquidation_rebate]] / [Vault_Debt * XYL_mint_min_collat_ratio]
+```
+
+Where:
+- Liquidation_tax = 15%
+- Liquidation_rebate = a sliding function that increases as collateralization decreases
+- XYL_mint_min_collat_ratio = 160%
+
+# Reserve Protection
+
+The Xylem Reserve plays an important role in the liquidation process:
+
+1. **Bad Debt Coverage**: If liquidation auctions fail to attract bidders, the Reserve can step in to clear bad debt
+2. **Protocol Solvency**: The Reserve ensures the protocol remains solvent during extreme market conditions
+3. **Long-term Stability**: A portion of all protocol revenue accrues to the Reserve to maintain adequate coverage
+
+The exact shape of the liquidation curves and incentives will be subject to ongoing refinement and governance action to optimize the liquidation process across various market scenarios. 
