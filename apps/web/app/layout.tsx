@@ -1,30 +1,35 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, JetBrains_Mono } from "next/font/google";
 
-import "@workspace/ui/globals.css"
-import { Providers } from "@/components/providers"
+import "@workspace/ui/globals.css";
+import { Providers } from "@/components/providers";
 
-const fontSans = Geist({
-  subsets: ["latin"],
+const inter = Inter({
+  subsets: ["latin", "cyrillic"],
   variable: "--font-sans",
-})
+});
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin", "cyrillic"],
   variable: "--font-mono",
-})
+});
+
+export const metadata = {
+  title: "Xylem DAO - Bitcoin-Backed Stablecoin Protocol",
+  description: "The First Bitcoin-Backed, DAO-Governed Stablecoin Protocol",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased `}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased `}
       >
         <Providers>{children}</Providers>
       </body>
     </html>
-  )
+  );
 }
