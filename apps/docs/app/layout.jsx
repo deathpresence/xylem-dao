@@ -14,7 +14,7 @@ const navbar = (
     // ... Your additional navbar options
   />
 );
-const footer = <Footer>All Rights Reserved {new Date().getFullYear()} © Xylem DAO.</Footer>;
+const footer = <Footer> Xylem DAO {new Date().getFullYear()} © All Rights Reserved.</Footer>;
 
 export default async function RootLayout({ children }) {
   return (
