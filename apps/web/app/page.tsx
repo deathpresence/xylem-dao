@@ -59,7 +59,8 @@ export default function Home() {
             </Link>
 
             <Link
-              href="#"
+              href="https://docs.xylemma.com"
+              target="_blank"
               className="text-sm font-medium text-zinc-400 transition-colors hover:text-white"
             >
               Documentation
@@ -107,14 +108,17 @@ export default function Home() {
                     Join Waitlist
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white/20 text-white hover:bg-white/10"
-                  >
-                    Learn More
-                    <ChevronRight className="ml-1 h-4 w-4" />
-                  </Button>
+                  <Link href="https://docs.xylemma.com" target="_blank">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-white/20
+                    text-white hover:bg-white/10"
+                    >
+                      Learn More
+                      <ChevronRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="flex items-center justify-center">
