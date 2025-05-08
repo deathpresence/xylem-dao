@@ -10,7 +10,7 @@ export const metadata = {
 
 const navbar = (
   <Navbar
-    logo={<b>Nextra</b>}
+    logo={<b>Xylem DAO</b>}
     // ... Your additional navbar options
   />
 );
