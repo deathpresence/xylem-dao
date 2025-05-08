@@ -1,4 +1,4 @@
 export default {
   disclaimer: "",
-  overview: "",
+  overview: "Overview",
 };
