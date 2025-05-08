@@ -1,6 +1,6 @@
 # Governance
 
-Xylem's governance is controlled by holders of the XYLEM tokens. The economic security of the Xylem network depends on various parameters which are managed through governance proposals.
+Xylem's governance is controlled by holders of the XYM tokens. The economic security of the Xylem network depends on various parameters which are managed through governance proposals.
 
 # Governance Parameters
 
@@ -12,15 +12,15 @@ These key parameters are subject to governance control:
 4. **Subsidy rate** [0.6%] - The rate at which the liquidation subsidy grows per 1% lower collateralization level in a liquidated vault
 5. **Subsidy threshold** [124%] - The vault collateralization threshold at which the Protocol begins to subsidize the liquidation process
 6. **Vault minimum balance** [10,000 sats] - The minimum amount of sats to instantiate a vault
-7. **Minimum borrow collateralization threshold** [130%] - The minimum collateralization level required to mint XYM from a vault
-8. **Reserve accrual rate** [50%] - The percentage of protocol profits which accrue to the Reserve, as opposed to XYLEM tokenholders
+7. **Minimum borrow collateralization threshold** [130%] - The minimum collateralization level required to mint USDx from a vault
+8. **Reserve accrual rate** [50%] - The percentage of protocol profits which accrue to the Reserve, as opposed to XYM tokenholders
 9. **Treasury Target Size** [10 BTC] - Target size of the BTC reserve used to insure against failed liquidation auctions
 
 # Governance Process
 
 All Governance parameters have initial values determined by the Xylem Foundation. These values can be amended via a governance vote at any time.
 
-The XYLEM token facilitates the following types of votes:
+The XYM token facilitates the following types of votes:
 
 1. Modify vault parameters (collateralization thresholds, fees, etc.)
 2. Allocate governance emissions
@@ -38,6 +38,6 @@ Carrying out Governance proposals on Bitcoin is logistically challenging. Xylem 
 
 # Risk Management
 
-Besides emergency governance votes to freeze additional XYM borrowing (e.g., in case of an exploit), governance decisions only affect newly created vaults. For example, if the vault liquidation threshold is altered, that only affects new vaults or new incremental borrowing from existing vaults.
+Besides emergency governance votes to freeze additional USDx borrowing (e.g., in case of an exploit), governance decisions only affect newly created vaults. For example, if the vault liquidation threshold is altered, that only affects new vaults or new incremental borrowing from existing vaults.
 
 All vaults are subject to the terms of the Canonical Reference Satoshis (CRSs) which instantiated them, not the current CRSs. This approach protects existing vault holders from unexpected changes to their collateralization terms. 

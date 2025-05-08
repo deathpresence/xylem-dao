@@ -1,30 +1,30 @@
 # Vaults
 
-A **vault** in the Xylem Protocol is a secure digital mechanism where users lock up their Bitcoin (BTC) as collateral to mint XYM, a Bitcoin-native stablecoin. These vaults are the backbone of the system—where BTC gets "parked" to create new value while ensuring everything stays over-collateralized and secure.
+A **vault** in the Xylem Protocol is a secure digital mechanism where users lock up their Bitcoin (BTC) as collateral to mint USDx, a Bitcoin-native stablecoin. These vaults are the backbone of the system—where BTC gets "parked" to create new value while ensuring everything stays over-collateralized and secure.
 
 # How Vaults Work
 
-When a user wants to mint XYM, they deposit BTC into a vault. This process follows strict protocol rules:
+When a user wants to mint USDx, they deposit BTC into a vault. This process follows strict protocol rules:
 
 1. The system checks if the user has enough BTC
 2. The current BTC/USD price is verified through oracles
 3. All conditions must be met, particularly staying above the **130% minimum collateralization ratio**
 
-For example, if you lock $10,000 in BTC, you can mint up to 6,250 XYM.
+For example, if you lock $10,000 in BTC, you can mint up to 6,250 USDx.
 
 # Key Functions
 
 The vault has two critical functions:
 
-1. **User Control:** The user can update the vault—adding more BTC, borrowing more XYM, repaying debt, or withdrawing BTC (as long as the vault remains safe).
+1. **User Control:** The user can update the vault—adding more BTC, borrowing more USDx, repaying debt, or withdrawing BTC (as long as the vault remains safe).
 
-2. **Liquidation Mechanism:** If BTC's value drops and the collateralization ratio falls below the **105% liquidation threshold**, the vault can be liquidated to protect the system. This ensures XYM is always backed by real BTC, even in volatile markets.
+2. **Liquidation Mechanism:** If BTC's value drops and the collateralization ratio falls below the **105% liquidation threshold**, the vault can be liquidated to protect the system. This ensures USDx is always backed by real BTC, even in volatile markets.
 
 # Technical Implementation
 
 The vault creation process happens in two linked transactions:
 
-* First transaction: The user receives their XYM tokens while their BTC is held as collateral
+* First transaction: The user receives their USDx tokens while their BTC is held as collateral
 * Second transaction: The BTC moves into a vault, which creates a record of the vault's creation
 
 The vault storing the BTC can be accessed in two ways:
@@ -32,10 +32,10 @@ The vault storing the BTC can be accessed in two ways:
 * When the user updates their vault through any of the authorized validators
 * When the vault's validators and oracle liquidate the vault if the collateral value drops to the Liquidation Threshold
 
-All changes to the vault are recorded to track the user's borrowing activity and collateral levels. The system references the minimum collateralization Canonical Reference Point to determine the amount of XYM that an individual vault can mint:
+All changes to the vault are recorded to track the user's borrowing activity and collateral levels. The system references the minimum collateralization Canonical Reference Point to determine the amount of USDx that an individual vault can mint:
 
 ```
-Maximum XYM = (BTC Collateral * BTC/USD Price) / (Minimum Collateralization Ratio)
+Maximum USDx = (BTC Collateral * BTC/USD Price) / (Minimum Collateralization Ratio)
 ```
 
 Where Minimum Collateralization Ratio = 130%. The MCR is a key risk parameter defined in the Governance CRS, and is subject to governance and therefore change.
