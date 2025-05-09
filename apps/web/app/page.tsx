@@ -706,7 +706,7 @@ export default function Home() {
             © 2025 Xylem DAO. All rights reserved.
           </p>
           <nav className="flex gap-4 sm:gap-6">
-            <Link href="#" className="text-xs text-zinc-500 hover:text-white">
+            {/* <Link href="#" className="text-xs text-zinc-500 hover:text-white">
               Terms of Service
             </Link>
             <Link href="#" className="text-xs text-zinc-500 hover:text-white">
@@ -714,7 +714,7 @@ export default function Home() {
             </Link>
             <Link href="#" className="text-xs text-zinc-500 hover:text-white">
               Contact
-            </Link>
+            </Link> */}
           </nav>
         </div>
       </footer>
