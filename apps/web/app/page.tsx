@@ -68,12 +68,14 @@ export default function Home() {
           </nav>
           <div className="flex items-center gap-4">
             {/* <MobileNav /> */}
-            <Button
-              size="sm"
-              className="hidden md:flex bg-white text-black hover:bg-white/90"
-            >
-              Join DAO
-            </Button>
+            <Link href="https://form.typeform.com/to/ZEGmnP3a" target="_blank">
+              <Button
+                size="sm"
+                className="hidden md:flex bg-white text-black hover:bg-white/90"
+              >
+                Join DAO
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -101,13 +103,19 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white border-0 hover:opacity-90"
+                  <Link
+                    href="https://form.typeform.com/to/ZEGmnP3a"
+                    target="_blank"
                   >
-                    Join Waitlist
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                    <Button
+                      size="lg"
+                      className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white border-0 hover:opacity-90"
+                    >
+                      Join Waitlist
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+
                   <Link href="https://docs.xylemdao.com" target="_blank">
                     <Button
                       size="lg"
@@ -667,13 +675,18 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white border-0 hover:opacity-90"
+                <Link
+                  href="https://form.typeform.com/to/ZEGmnP3a"
+                  target="_blank"
                 >
-                  Join Waitlist
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white border-0 hover:opacity-90"
+                  >
+                    Join Waitlist
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
                 <Button
                   size="lg"
                   variant="outline"
